@@ -13,12 +13,9 @@ while True:
         raw_data = temp[2:-5].split()
         stearing = (float(re.sub(r'[^0-9]', '', raw_data[0]))/102300 -0.5)*2
         breakbtn = (float(re.sub(r'[^0-9]', '', raw_data[1]))-1)*-1
-        breakbtn = (float(re.sub(r'[^0-9]', '', raw_data[2]))-1)*-1
-        '''
-        print(stearing ,breakbtn , accelerate)
+        accelerate = (float(re.sub(r'[^0-9]', '', raw_data[2]))-1)*-1
         gamepad.left_joystick_float(x_value_float=stearing, y_value_float=0)
         gamepad.left_trigger_float(value_float=breakbtn)
         gamepad.right_trigger_float(value_float=accelerate)
         gamepad.update()
-        
-        '''
+        print(stearing , breakbtn,accelerate)
