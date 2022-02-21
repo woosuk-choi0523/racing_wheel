@@ -1,7 +1,5 @@
-import string
 import vgamepad as vg
 import serial
-import time
 import re
 
 ser = serial.Serial('COM3', 9600) # 'COM3' is arduino`s serial port`
